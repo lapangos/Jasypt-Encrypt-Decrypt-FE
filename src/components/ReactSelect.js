@@ -130,10 +130,10 @@ class ReactSelect extends Component {
             class="str"
             style={str}
             onClick={() =>
-              window.open("https://en.wikipedia.org/wiki/MD5", "_blank")
+              window.open("https://en.wikipedia.org/wiki/SHA-2", "_blank")
             }
           >
-            PBEWithMD5AndDES
+            PBEWithHmacSHA512AndAES_256
           </span>{" "}
           encryption algorithm but it provides options to select other stronger
           encryption options too such as{" "}
