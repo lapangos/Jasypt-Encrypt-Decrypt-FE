@@ -22,7 +22,7 @@ class ReactSelect extends Component {
   }
 
   getData() {
-    axios.get("http://localhost:8090/getAlgorithm").then((res) => {
+    axios.get("https://jasypt-encrypt-decrypt.herokuapp.com/getAlgorithm").then((res) => {
       var data = res.data.algorithm;
       this.setState({ items: data });
     });
@@ -45,7 +45,7 @@ class ReactSelect extends Component {
       };
 
       axios
-        .post("http://localhost:8090/getEncryptedText", jasyptRequest)
+        .post("https://jasypt-encrypt-decrypt.herokuapp.com/getEncryptedText", jasyptRequest)
         .then((res) => {
           var data = res.data.encryptedString;
           this.setState({
@@ -76,7 +76,7 @@ class ReactSelect extends Component {
       };
 
       axios
-        .post("http://localhost:8090/getDecryptedText", jasyptRequest)
+        .post("https://jasypt-encrypt-decrypt.herokuapp.com/getDecryptedText", jasyptRequest)
         .then((res) => {
           var data = res.data.decryptedString;
           this.setState({
